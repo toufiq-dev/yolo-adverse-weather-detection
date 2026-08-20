@@ -1,0 +1,101 @@
+# YOLO Model Configuration for Autonomous Vehicle Detection
+
+# Dataset Configuration
+dataset:
+  name: "DAWN"
+  path: "data/dawn_dataset"
+  classes:
+    - "Bicycle"
+    - "Bus"
+    - "Car"
+    - "Motorcycle"
+    - "Person"
+    - "Train"
+    - "Truck"
+  num_classes: 7
+
+# Model Variants
+models:
+  yolov8x:
+    backbone: "CSPDarknet"
+    neck: "PANet"
+    head: "Multi-task loss"
+    description: "High accuracy, robust under fog, rain, and occlusion"
+    
+  yolov11n:
+    backbone: "Smaller CSPDarknet"
+    neck: "Simplified neck"
+    head: "Standard YOLO head"
+    description: "Lightweight, fast inference"
+    
+  yolov11s:
+    backbone: "CSPDarknet (increased depth)"
+    neck: "FPN"
+    head: "YOLO head"
+    description: "Balanced speed and accuracy"
+    
+  yolov11m:
+    backbone: "Deeper CSPDarknet"
+    neck: "PANet"
+    head: "Multi-task loss"
+    description: "High accuracy, suitable for complex scenes"
+    
+  yolov11l:
+    backbone: "Deeper CSPDarknet"
+    neck: "Enhanced PANet"
+    head: "Refined head"
+    description: "High precision for complex environments"
+    
+  yolov11x:
+    backbone: "Deepest CSPDarknet"
+    neck: "Optimized PANet"
+    head: "Refined YOLO head"
+    description: "Maximum detection precision"
+    
+  yolov12x:
+    backbone: "Advanced backbone with multi-modal sensor fusion"
+    neck: "PANet + FPN"
+    head: "Self-attention mechanisms"
+    description: "Advanced architecture, superior performance"
+
+# Training Configuration
+training:
+  optimizer: "AdamW"
+  learning_rate: 0.000909
+  batch_size: 4
+  epochs: 120
+  image_size: 640
+  hardware: "NVIDIA T4 GPU (Kaggle)"
+
+# Evaluation Metrics
+metrics:
+  - "precision"
+  - "recall"
+  - "f1_score"
+  - "accuracy"
+  - "mAP@50"
+  - "mAP@50-95"
+
+# Weather Conditions
+weather_conditions:
+  - "fog"
+  - "rain"
+  - "snow"
+  - "sandstorm"
+
+# Augmentation Settings
+augmentation:
+  clahe:
+    enabled: true
+    clip_limit: 2.0
+  dehazing:
+    enabled: true
+  denoising:
+    enabled: true
+    method: "Fast Non-Local Means"
+  sharpening:
+    enabled: true
+    kernel_size: 3
+  weather_augmentation:
+    enabled: true
+    types: ["fog", "rain", "snow", "sandstorm"]
