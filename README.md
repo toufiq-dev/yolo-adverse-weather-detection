@@ -22,10 +22,21 @@ Thesis-YOLO-Autonomous-Vehicles/
 │   └── thesis-original/        # Original thesis reference
 ├── data/                        # Dataset information
 │   └── dataset-info/           # Dataset description and metadata
-├── src/                         # Source code (future phases)
-│   └── config/                 # Configuration files
+├── src/                         # Source code
+│   ├── __init__.py
+│   ├── training.py              # YOLO training pipeline
+│   ├── evaluation.py            # Metrics computation & evaluation
+│   ├── augmentation.py          # Weather-specific augmentation
+│   ├── visualization.py         # Performance plots & thesis figures
+│   └── config/                  # Configuration files
+│       ├── model_config.yaml    # Model & training config
+│       └── dawn_dataset.yaml    # YOLO-format dataset config
 ├── requirements/                # Python dependencies
 └── scripts/                     # Utility scripts
+    ├── data_preprocessing.py    # Image preprocessing (CLAHE, dehazing, etc.)
+    ├── extract_figures.py       # Extract figures from thesis PDF
+    ├── run_experiment.py        # End-to-end experiment pipeline
+    └── compare_models.py        # Generate thesis comparison tables/figures
 ```
 
 ## Current Status
@@ -37,15 +48,20 @@ Thesis-YOLO-Autonomous-Vehicles/
 - ✅ Preliminary results with performance tables
 - ✅ Performance graphs for all 7 YOLO model variants
 
-### Phase II: Implementation (Planned)
-- 🔄 Model training pipeline
-- 🔄 Data preprocessing scripts
-- 🔄 Evaluation metrics implementation
+### Phase II: Implementation (Completed)
+- ✅ Model training pipeline (`src/training.py`)
+- ✅ Data preprocessing scripts (`scripts/data_preprocessing.py`)
+- ✅ Weather-specific augmentation (`src/augmentation.py`)
+- ✅ Evaluation metrics (`src/evaluation.py`)
+- ✅ Visualization & thesis figures (`src/visualization.py`)
+- ✅ End-to-end experiment runner (`scripts/run_experiment.py`)
+- ✅ Model comparison script (`scripts/compare_models.py`)
+- ✅ YOLO dataset config (`src/config/dawn_dataset.yaml`)
 
-### Phase III: Results & Analysis (Planned)
-- 🔄 Comprehensive results analysis
-- 🔄 Comparison with state-of-the-art
-- 🔄 Final thesis documentation
+### Phase III: Results & Analysis (Next)
+- 🔄 Run experiments on DAWN dataset
+- 🔄 Generate final comparison tables and figures
+- 🔄 Write up analysis and SOTA comparison
 
 ## Key Findings (Preliminary)
 
@@ -58,6 +74,49 @@ Thesis-YOLO-Autonomous-Vehicles/
 | YOLOv11x | 93.36% | 90.91% | 92.12% | 85.39% | 96.08% | 76.63% |
 | YOLOv12x | 91.70% | 87.34% | 89.47% | 80.94% | 94.30% | 74.58% |
 | **YOLOv8x** | **93.64%** | **91.96%** | **92.80%** | **86.56%** | **96.14%** | **80.44%** |
+
+## Dataset Setup
+
+The DAWN dataset must be downloaded from Roboflow before running experiments.
+
+### Prerequisites
+```bash
+pip install roboflow
+```
+
+### Download & Setup
+
+1. Get a free API key at https://app.roboflow.com/settings/api
+2. Set the environment variable or pass it directly:
+
+```bash
+# Option A: Environment variable
+export ROBOFLOW_API_KEY=your_key_here
+python scripts/download_dataset.py
+
+# Option B: Pass directly
+python scripts/download_dataset.py --api-key YOUR_KEY
+```
+
+This will:
+- Download the DAWN dataset (974 train + 425 valid images, 7 classes)
+- Create a test split (70/20/10 rule)
+- Set up the YOLO-format directory structure at `data/dawn_dataset/`
+
+### Dataset Structure
+```
+data/dawn_dataset/
+├── train/
+│   ├── images/    # 974 training images
+│   └── labels/    # YOLO-format bounding box labels
+├── valid/
+│   ├── images/    # 425 validation images
+│   └── labels/
+├── test/
+│   ├── images/    # ~140 test images (auto-created)
+│   └── labels/
+└── data.yaml      # YOLO dataset config
+```
 
 ## Author
 

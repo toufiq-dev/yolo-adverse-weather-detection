@@ -1,0 +1,20 @@
+# DAWN Dataset - YOLO Format Configuration
+# DAWN: Detection in Adverse Weather Nature Dataset
+
+# Paths (relative to project root or absolute)
+train: data/dawn_dataset/train/images
+val: data/dawn_dataset/valid/images
+test: data/dawn_dataset/test/images
+
+# Number of classes
+nc: 7
+
+# Class names
+names:
+  0: Bicycle
+  1: Bus
+  2: Car
+  3: Motorcycle
+  4: Person
+  5: Train
+  6: Truck

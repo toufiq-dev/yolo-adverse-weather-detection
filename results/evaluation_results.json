@@ -1,0 +1,65 @@
+{
+  "YOLOv11n": {
+    "precision": 0.8721,
+    "recall": 0.7993,
+    "f1": 0.8341,
+    "accuracy": 0.6795,
+    "mAP50": 0.8592,
+    "mAP50_95": 0.6527,
+    "per_class": {}
+  },
+  "YOLOv11s": {
+    "precision": 0.9457,
+    "recall": 0.7161,
+    "f1": 0.8151,
+    "accuracy": 0.6879,
+    "mAP50": 0.9484,
+    "mAP50_95": 0.7294,
+    "per_class": {}
+  },
+  "YOLOv11m": {
+    "precision": 0.9310,
+    "recall": 0.7603,
+    "f1": 0.8370,
+    "accuracy": 0.7197,
+    "mAP50": 0.9587,
+    "mAP50_95": 0.7420,
+    "per_class": {}
+  },
+  "YOLOv11l": {
+    "precision": 0.9317,
+    "recall": 0.9061,
+    "f1": 0.9187,
+    "accuracy": 0.8496,
+    "mAP50": 0.9540,
+    "mAP50_95": 0.7716,
+    "per_class": {}
+  },
+  "YOLOv11x": {
+    "precision": 0.9336,
+    "recall": 0.9091,
+    "f1": 0.9212,
+    "accuracy": 0.8539,
+    "mAP50": 0.9608,
+    "mAP50_95": 0.7663,
+    "per_class": {}
+  },
+  "YOLOv12x": {
+    "precision": 0.9170,
+    "recall": 0.8734,
+    "f1": 0.8947,
+    "accuracy": 0.8094,
+    "mAP50": 0.9430,
+    "mAP50_95": 0.7458,
+    "per_class": {}
+  },
+  "YOLOv8x": {
+    "precision": 0.9364,
+    "recall": 0.9196,
+    "f1": 0.9280,
+    "accuracy": 0.8656,
+    "mAP50": 0.9614,
+    "mAP50_95": 0.8044,
+    "per_class": {}
+  }
+}
