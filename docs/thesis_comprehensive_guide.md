@@ -1,11 +1,10 @@
 # Comprehensive Thesis Presentation Guide
 ## Performance Evaluation of YOLO Models for Object Detection in Autonomous Vehicles Under Adverse Weather Conditions
 
-**Author:** Md. Robiul Islam Rabby (Roll No: 1910046)  
-**Supervisor:** Ms. Fariya Tabassum, Assistant Professor  
-**External:** Hafsa Binte Kibria, Assistant Professor  
-**Department:** Electrical & Computer Engineering  
-**Institution:** Rajshahi University of Engineering & Technology (RUET)  
+**Author:** Toufiqur Rahman (Student ID: 252-25-013)  
+**Supervisor:** Professor Dr. Sheak Rashed Haider Noori, Professor & Head  
+**Department:** Department of Computer Science and Engineering  
+**Institution:** Daffodil International University  
 **Date:** June 2025
 
 ---
@@ -378,12 +377,12 @@ YOLOv8x outperforms traditional two-stage detectors (Faster R-CNN) and other one
 ### 9.1 Code Repository
 
 The complete implementation is available at:
-**https://github.com/toufiq-dev/Thesis-YOLO-Autonomous-Vehicles**
+**https://github.com/toufiq-dev/yolo-adverse-weather-detection**
 
 ### 9.2 Repository Structure
 
 ```
-Thesis-YOLO-Autonomous-Vehicles/
+yolo-adverse-weather-detection/
 ├── src/
 │   ├── training.py          # YOLO training pipeline (Ultralytics)
 │   ├── evaluation.py        # Metrics: precision, recall, F1, mAP
@@ -500,3 +499,5 @@ python scripts/compare_models.py --results results/evaluation_results.json
 
 *Generated with Codebuff 🤖*
 *Comprehensive guide for thesis presentation — June 2025*
+
+**Supervisor:** Professor Dr. Sheak Rashed Haider Noori, Professor & Head, Department of Computer Science and Engineering, Daffodil International University*

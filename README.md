@@ -14,7 +14,7 @@ This repository contains the research work for evaluating YOLO-based object dete
 ## Project Structure
 
 ```
-Thesis-YOLO-Autonomous-Vehicles/
+yolo-adverse-weather-detection/
 ├── README.md                    # Project overview and documentation
 ├── docs/                        # Documentation
 │   ├── proposal/               # Phase I proposal document
@@ -120,8 +120,8 @@ data/dawn_dataset/
 
 ## Author
 
-**Md. Robiul Islam Rabby**  
-Roll No: 1910046  
+**Toufiqur Rahman**  
+Student ID: 252-25-013  
 MSc. in Computer Science and Engineering  
 Daffodil International University
 
@@ -131,6 +131,6 @@ This project is for academic research purposes.
 
 ## Acknowledgments
 
-- Supervisor: Ms. Fariya Tabassum, Assistant Professor
-- Department of Electrical & Computer Engineering
+- Supervisor: Professor Dr. Sheak Rashed Haider Noori, Professor & Head
+- Department of Computer Science and Engineering
 - Daffodil International University
