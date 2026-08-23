@@ -7,6 +7,8 @@ Produces the final comparison tables (Table 4.8) and figures
 (Figs 4.37, 4.38) for the thesis paper from saved evaluation results.
 """
 
+import utils.transport
+import utils.session
 import os
 import sys
 import json

@@ -27,10 +27,8 @@ venv/
 env/
 ENV/
 .venv/
-.env
 
 # IDE
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -63,3 +61,5 @@ datasets/
 
 # Extracted images (can be regenerated)
 extracted_images/
+config.bat
+node_modules
